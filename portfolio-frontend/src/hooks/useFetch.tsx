@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 
+interface IDataProps {
+  data: []
+}
 const useFetch = (url: string) => {
-  const [data, setData] = useState<[] | null>(null);
+  const [data, setData] = useState<IDataProps | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<unknown>(null);
 
