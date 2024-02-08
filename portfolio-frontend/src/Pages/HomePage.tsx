@@ -1,14 +1,14 @@
-import React from 'react'
-import useFetch from '../hooks/useFetch'
+import React from "react";
+import useFetch from "../hooks/useFetch";
 
 const HomePage = () => {
-    const {loading, error, data} = useFetch('http://localhost:1337/api/portfolios')
-    error && <div>{error}</div>
-  return (
-    <div>
-      HomePage
-    </div>
-  )
-}
+  const { loading, error, data } = useFetch(
+    "http://localhost:1337/api/portfolios"
+  );
 
-export default HomePage
+  console.log(loading, error, data);
+
+  return <div>HomePage</div>;
+};
+
+export default HomePage;
